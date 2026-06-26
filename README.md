@@ -8,7 +8,7 @@ Use it when a research task needs more than a one-shot draft: source collection,
 
 - Industry research reports
 - Company research reports
-- Internship or portfolio research deliverables
+- Professional research deliverables
 - Sell-side-style report drafts
 - Source-backed research workflows
 - Multi-agent / multi-role research coordination

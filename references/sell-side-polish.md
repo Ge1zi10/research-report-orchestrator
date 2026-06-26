@@ -1,6 +1,6 @@
 # Sell-side Polish Checklist
 
-Use this near the end of a report project, especially for internship, portfolio, or mentor-facing deliverables.
+Use this near the end of a report project, especially for professional or external-facing deliverables.
 
 ## Final Identity
 
@@ -26,21 +26,21 @@ The report should keep source discipline in the background while foregrounding t
 
 Prefer explanatory headings:
 
-- Weak: `CRO 介绍`
-- Strong: `为什么创新药景气会向 CRO 传导？`
+- Weak: `渠道介绍`
+- Strong: `为什么渠道效率决定商用清洁机器人的盈利弹性？`
 
-- Weak: `支付体系`
-- Strong: `为什么支付决定创新药真正赚钱？`
+- Weak: `成本结构`
+- Strong: `为什么核心零部件降价会放大利润修复？`
 
-- Weak: `License-out`
-- Strong: `为什么 License-out 是开始，不是终点？`
+- Weak: `海外市场`
+- Strong: `为什么本地服务网络决定工业传感器出海上限？`
 
 Rewrite encyclopedia-style sections:
 
-- `CRO 负责什么` → `为什么创新药景气会向 CRO 传导？`
-- `CDMO 介绍` → `为什么商业化兑现后，CDMO 弹性更偏后周期？`
-- `支付体系有哪些` → `为什么支付体系决定创新药真正赚钱？`
-- `国际化包括什么` → `为什么海外注册和商业化比交易新闻更重要？`
+- `渠道模式介绍` → `为什么渠道效率决定商用清洁机器人的盈利弹性？`
+- `设备租赁业务介绍` → `为什么客户回本周期决定低温仓储设备的渗透速度？`
+- `成本结构有哪些` → `为什么核心零部件降价会放大利润修复？`
+- `海外市场包括什么` → `为什么本地服务网络决定工业传感器出海上限？`
 
 ## Chapter Takeaways
 
@@ -48,7 +48,7 @@ Add a short `本章小结` to serious reports. It should state the point, not su
 
 Good pattern:
 
-`本章小结：创新药主线的本质，是行业从“研发投入”进入“价值兑现”。产业链研究的重点，也应从单个产品或交易，转向价值如何在研发、临床、生产、支付和国际化环节中传导。`
+`本章小结：本轮商用清洁机器人修复的核心，不只是需求回暖，而是渠道效率、零部件成本改善和产品结构升级共同推动利润弹性释放。后续研究应从单纯销量跟踪，转向对价格、费用率和渠道质量的综合判断。`
 
 ## Visuals
 

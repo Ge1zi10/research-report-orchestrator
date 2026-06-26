@@ -1,6 +1,6 @@
 ---
 name: research-report-orchestrator
-description: Use for Chinese industry research reports, company research reports, sell-side-style research drafts, internship/portfolio research deliverables, or any task that needs a reusable master-agent workflow with staged research, analysis, logic review, editing, quality control, and final Word/PPT/PDF-ready polishing.
+description: Use for Chinese industry research reports, company research reports, sell-side-style research drafts, professional research deliverables, or any task that needs a reusable master-agent workflow with staged research, analysis, logic review, editing, quality control, and final Word/PPT/PDF-ready polishing.
 ---
 
 # Research Report Orchestrator
@@ -64,9 +64,9 @@ See `references/role-prompts.md` for reusable role prompts.
 For industry/company research:
 
 - Lead with the central judgment, not the evidence trail.
-- Organize by industry/company logic, not by “which documents were read.”
+- Organize by industry/company logic, not by source-reading order.
 - Treat “complete research report” as the default final form. The final deliverable must not read like a research memo, evidence audit, workflow log, or literature review.
-- Use “why” headings where possible: e.g. “为什么支付决定创新药真正赚钱？”
+- Use “why” headings where possible: e.g. “为什么渠道效率决定商用清洁机器人的盈利弹性？”
 - Move caveats, source limitations, and “cannot extrapolate” warnings into methods, risks, or limitations unless they are material to the current argument.
 - Use cases as case boxes that support the argument; do not let cases become the main structure.
 - Add chapter takeaways for serious reports.
