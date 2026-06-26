@@ -2,9 +2,9 @@
 
 A reusable Codex skill for producing source-backed Chinese industry and company research reports through a staged, multi-role workflow.
 
-This skill is designed for research tasks that need more than a one-shot draft: public-source research, evidence hardening, analysis, logic review, editing, quality control, final report rewriting, and sell-side-style polishing.
+Use it when a research task needs more than a one-shot draft: source collection, evidence hardening, analysis, logic review, editing, quality control, final report rewriting, and sell-side-style polishing.
 
-## What It Helps With
+## Use Cases
 
 - Industry research reports
 - Company research reports
@@ -17,7 +17,7 @@ The default output language is Chinese. The default final artifact is an editabl
 
 ## Workflow
 
-The skill follows a “master agent + specialist roles” structure:
+The workflow uses a “master agent + specialist roles” structure:
 
 1. Master Agent
 2. Researcher
@@ -81,8 +81,3 @@ Use $research-report-orchestrator to convert these source materials into a compl
 ```text
 Use $research-report-orchestrator to organize this project as a master-agent workflow with separate researcher, analyst, reviewer, editor, and QC outputs.
 ```
-
-## Privacy Note
-
-This repository contains only the reusable skill instructions and generic workflow templates. It should not contain private research materials, local file paths, personal documents, client information, or unpublished project content.
-
