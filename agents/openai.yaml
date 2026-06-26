@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Report Orchestrator"
+  short_description: "Multi-agent research report workflow"
+  default_prompt: "Use -report-orchestrator to create a complete Chinese industry or company research report with staged source work, analysis, review, QC, and sell-side-style polishing."
