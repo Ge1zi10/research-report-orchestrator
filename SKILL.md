@@ -1,11 +1,13 @@
 ---
 name: research-report-orchestrator
-description: Use for Chinese industry research reports, company research reports, sell-side-style research drafts, professional research deliverables, or any task that needs a reusable master-agent workflow with staged research, analysis, logic review, editing, quality control, and final Word/PPT/PDF-ready polishing.
+description: Use for Chinese industry research reports, company research reports, sell-side-style research drafts, investment research support, or portfolio-style AI research workflow projects that need a reusable master-agent process with staged source collection, evidence books, claim-source mapping, risk and counterargument review, analysis, logic review, editing, quality control, and final Word/PPT/PDF-ready polishing.
 ---
 
 # Research Report Orchestrator
 
 Use this skill to run a repeatable “1 master agent + specialist roles” workflow for industry or company research reports. The default output language is Chinese; default deliverables are editable Markdown/Word first, then PPT/PDF if requested.
+
+This skill is designed for research workflow orchestration, not one-shot report generation. Keep the final report concise while preserving a traceable research base through evidence books, risk registers, and claim-source maps.
 
 ## Operating Principle
 
@@ -16,13 +18,15 @@ The workflow is:
 1. Confirm objective and reader
 2. Create or update task files
 3. Research and source hardening
-4. Analysis
-5. Logic review
-6. Editing and humanization
-7. Quality control
-8. Final report rewrite
-9. Sell-side-style polish
-10. Deliver editable document and next-step options
+4. Evidence book and source mapping
+5. Analysis
+6. Risk and counterargument review
+7. Logic review
+8. Editing and humanization
+9. Quality control
+10. Final report rewrite
+11. Sell-side-style polish
+12. Deliver editable document, audit companion, and next-step options
 
 ## Default Workspace Structure
 
@@ -31,12 +35,16 @@ When starting a substantial report, create or reuse:
 ```text
 AGENTS.md
 tasks/current-task.md
+sources/
 outputs/01-research.md
-outputs/02-analysis.md
-outputs/03-logic-review.md
-outputs/04-edited-draft.md
-outputs/05-quality-check.md
+outputs/02-evidence-book.md
+outputs/03-analysis.md
+outputs/04-risk-register.md
+outputs/05-logic-review.md
+outputs/06-edited-draft.md
+outputs/07-quality-check.md
 final/report.md
+final/claim-source-map.md
 final/report.docx
 ```
 
@@ -50,14 +58,16 @@ Use these role gates, either as separate Codex conversations or as internal stag
 
 - Master Agent: clarify scope, manage task files, decide rework, produce final handoff.
 - Researcher: collect facts and sources; do not make final industry judgments.
+- Evidence Manager: create the evidence book, source index, and claim-source map; verify that key claims remain traceable.
 - Analyst: explain industry/company logic using verified facts.
+- Risk & Counterargument Reviewer: identify risks, skeptical views, failure conditions, and monitoring indicators.
 - Logic Reviewer: check whether conclusions follow from evidence.
 - Editor: improve structure, language, readability, and human voice without inventing facts.
 - Quality Controller: score and decide pass/rework; do not secretly repair prior-role defects.
 - Final Report Rewriter: convert process outputs into a publishable report, not a process log.
 - Sell-side Polisher: add report flavor: viewpoint-led headings, chapter takeaways, diagrams, concise frameworks, and “why” logic.
 
-See `references/role-prompts.md` for reusable role prompts.
+See `references/role-prompts.md` for reusable role prompts. See `references/evidence-and-risk.md` when the task needs evidence books, risk registers, source libraries, claim-source maps, or optional vector retrieval.
 
 ## Report Standards
 
@@ -72,8 +82,29 @@ For industry/company research:
 - Add chapter takeaways for serious reports.
 - Prefer clear diagrams, short comparison tables, and summary boxes over wide prose-heavy tables.
 - Keep source traceability intact: no unsupported key facts in the final report.
+- For serious reports, deliver an audit companion: `final/claim-source-map.md` plus an evidence book or risk register when useful.
 
 See `references/sell-side-polish.md` for the final polishing checklist.
+
+## Evidence and Risk Companions
+
+For serious industry or company reports, separate the readable report from the research audit trail:
+
+- `outputs/02-evidence-book.md`: full evidence ledger with claim IDs, source IDs, reasoning, limitations, conflicts, and confidence.
+- `outputs/04-risk-register.md`: risks, counterarguments, failure conditions, trigger signals, and monitoring indicators.
+- `final/claim-source-map.md`: concise audit table covering the material claims that appear in the final report.
+
+Use `templates/` as starting points when creating these files. If there are many long PDFs, filings, policy documents, or web pages, optionally create a source library and vector index:
+
+```text
+sources/raw/
+sources/processed/
+sources/source-index.csv
+vectors/chunks.jsonl
+vectors/index/
+```
+
+Treat vector retrieval as an optional source-finding aid. It does not replace citation review, source hierarchy, or logic checking.
 
 ## Mandatory Final Rewrite Gate
 
@@ -86,13 +117,17 @@ Before creating the final Word/PPT/PDF, run a final rewrite gate:
 - If caveats interrupt the main narrative, move them to risks, limitations, methods, or footnotes.
 - If cases dominate the spine, convert them to case boxes.
 - If there is no core framework chart, propose or create one before delivery.
+- If material claims lack entries in the evidence book or claim-source map, update the audit companion before delivery.
+- If the report lacks credible downside or counterargument discussion, run the Risk & Counterargument Reviewer gate before delivery.
 
 ## Rework Rules
 
 Quality control below 85/100 means do not publish. Run targeted rework:
 
 - Source gap → Researcher
+- Missing source mapping or weak evidence traceability → Evidence Manager
 - Unsupported conclusion → Analyst
+- Missing downside, one-sided thesis, or unclear failure condition → Risk & Counterargument Reviewer
 - Contradiction or causality problem → Logic Reviewer
 - Robotic prose or poor readability → Editor / Humanize pass
 - Report still reads like process notes → Final Report Rewriter / Sell-side Polisher
@@ -114,9 +149,13 @@ For PPT deliverables, first finalize the report logic, then convert to a slide o
 7. Risks
 8. Conclusion / implications
 
+## Compliance Boundary
+
+Use public, authorized, and citeable materials. Do not process confidential internship materials, client information, unpublished financials, inside information, or anything that may violate NDA, compliance, or professional ethics. Do not present the output as regulated investment advice unless the user explicitly provides an appropriate authorized context and the report still keeps assumptions, sources, and limitations visible.
+
 ## Minimal Trigger Examples
 
 - “用这套模式帮我做 XX 行业研究报告。”
-- “把这个行业研究做成主控 + 资料 + 分析 + 审核 + 编辑 + QC 流程。”
-- “这份公司研究报告帮我按券商研报风格重写。”
-- “我想把研究流程封装成可复用的多 Agent 工作流。”
+- “把这个行业研究做成主控 + 资料 + 证据底稿 + 分析 + 风险 + 审核 + 编辑 + QC 流程。”
+- “这份公司研究报告帮我按券商研报风格重写，并补充论点来源映射。”
+- “我想把研究流程封装成可复用的多 Agent 投研工作流。”

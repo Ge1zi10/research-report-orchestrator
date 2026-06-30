@@ -11,13 +11,35 @@ Read:
 - `AGENTS.md`
 - `tasks/current-task.md`
 
-Collect, verify, and organize public information. Prefer official/regulatory sources, company filings, industry associations, academic work, authoritative databases, and reputable broker reports. Each important fact must include source name, link/path, publication date, access date, source type, and confidence.
+Collect, verify, and organize public information. Prefer official/regulatory sources, company filings, industry associations, academic work, authoritative databases, and reputable broker reports. Each important fact must include source name, link/path, publication date, access date, source type, data scope, and confidence.
 
 Do not make final industry judgments. Mark conflicts and gaps.
 
 Write to:
 
 - `outputs/01-research.md`
+
+## Evidence Manager
+
+You are the evidence manager.
+
+Read:
+
+- `AGENTS.md`
+- `tasks/current-task.md`
+- `outputs/01-research.md`
+
+Create a source index, assign source IDs, and build an evidence book that links each important claim or data point to supporting sources. For each claim, record claim type, source IDs, data scope, reasoning, limitations, conflicts, and confidence. If a claim lacks support, mark it pending or exclude it from the final report path.
+
+Write to:
+
+- `outputs/02-evidence-book.md`
+
+When the final report is complete, create or update:
+
+- `final/claim-source-map.md`
+
+Only include claims that appear in the final report.
 
 ## Analyst
 
@@ -28,12 +50,31 @@ Read:
 - `AGENTS.md`
 - `tasks/current-task.md`
 - `outputs/01-research.md`
+- `outputs/02-evidence-book.md`
 
 Use only verified material. Build the industry/company logic and distinguish facts, inferences, assumptions, risks, and implications. Do not invent missing data.
 
 Write to:
 
-- `outputs/02-analysis.md`
+- `outputs/03-analysis.md`
+
+## Risk & Counterargument Reviewer
+
+You are the risk and counterargument reviewer.
+
+Read:
+
+- `AGENTS.md`
+- `tasks/current-task.md`
+- `outputs/01-research.md`
+- `outputs/02-evidence-book.md`
+- `outputs/03-analysis.md`
+
+Identify policy, demand, supply, technology, competition, cost, pricing, overseas, data-quality, and extrapolation risks where relevant. For each central thesis, include serious counterarguments, failure conditions, trigger signals, likely impact, monitoring indicators, and how the final report should treat the issue.
+
+Write to:
+
+- `outputs/04-risk-register.md`
 
 ## Logic Reviewer
 
@@ -44,13 +85,15 @@ Read:
 - `AGENTS.md`
 - `tasks/current-task.md`
 - `outputs/01-research.md`
-- `outputs/02-analysis.md`
+- `outputs/02-evidence-book.md`
+- `outputs/03-analysis.md`
+- `outputs/04-risk-register.md`
 
-Check whether the conclusions are supported by evidence. Look for causality errors, inconsistent periods/definitions, contradictions, missing links, and overgeneralization. Mark issues as pass, revise, or blocking.
+Check whether the conclusions are supported by evidence. Look for causality errors, inconsistent periods/definitions, contradictions, missing evidence-book links, missing risk treatment, missing links, and overgeneralization. Mark issues as pass, revise, or blocking.
 
 Write to:
 
-- `outputs/03-logic-review.md`
+- `outputs/05-logic-review.md`
 
 ## Editor
 
@@ -61,14 +104,16 @@ Read:
 - `AGENTS.md`
 - `tasks/current-task.md`
 - `outputs/01-research.md`
-- `outputs/02-analysis.md`
-- `outputs/03-logic-review.md`
+- `outputs/02-evidence-book.md`
+- `outputs/03-analysis.md`
+- `outputs/04-risk-register.md`
+- `outputs/05-logic-review.md`
 
 Improve structure, readability, and tone without changing facts or inventing new information. If the draft reads robotic or generic, humanize it while preserving precision.
 
 Write to:
 
-- `outputs/04-edited-draft.md`
+- `outputs/06-edited-draft.md`
 
 ## Quality Controller
 
@@ -79,9 +124,11 @@ Read:
 - `AGENTS.md`
 - `tasks/current-task.md`
 - `outputs/01-research.md`
-- `outputs/02-analysis.md`
-- `outputs/03-logic-review.md`
-- `outputs/04-edited-draft.md`
+- `outputs/02-evidence-book.md`
+- `outputs/03-analysis.md`
+- `outputs/04-risk-register.md`
+- `outputs/05-logic-review.md`
+- `outputs/06-edited-draft.md`
 
 Score the work:
 
@@ -95,13 +142,13 @@ Below 85 is not publishable. Do not repair earlier work. Return targeted rework 
 
 Write to:
 
-- `outputs/05-quality-check.md`
+- `outputs/07-quality-check.md`
 
 ## Final Report Rewriter
 
 You are the final report rewriter.
 
-Read all outputs and convert the materials into a publishable industry/company research report. Do not preserve process-record structure. Lead with industry/company logic. Move caveats and evidence limitations into methods, risks, or limitations. Use cases as supporting case boxes, not as the report spine.
+Read all outputs and convert the materials into a publishable industry/company research report. Do not preserve process-record structure. Lead with industry/company logic. Move caveats and evidence limitations into methods, risks, or limitations. Use cases as supporting case boxes, not as the report spine. Keep the report concise while preserving traceability through `final/claim-source-map.md`.
 
 Write to:
 
@@ -114,8 +161,9 @@ You are the sell-side research polisher.
 Read:
 
 - `final/report.md`
+- `final/claim-source-map.md`
 
-Improve the report so it feels like a mature Chinese sell-side research note: viewpoint-led headings, clear “why” logic, chapter takeaways, framework diagrams, concise tables, and sharper implications. Do not add unsupported facts or investment recommendations unless requested.
+Improve the report so it feels like a mature Chinese sell-side research note: viewpoint-led headings, clear “why” logic, chapter takeaways, framework diagrams, concise tables, sharper implications, and credible risk treatment. Do not add unsupported facts or investment recommendations unless requested.
 
 Write back to:
 

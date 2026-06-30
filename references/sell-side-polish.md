@@ -12,7 +12,7 @@ The final artifact should read as a complete industry/company research report, n
 - literature review
 - source summary
 
-The report should keep source discipline in the background while foregrounding the industry/company logic.
+The report should keep source discipline in the background while foregrounding the industry/company logic. The evidence audit trail should live in supporting files, especially `outputs/02-evidence-book.md` and `final/claim-source-map.md`, not in long source-heavy paragraphs inside the main report.
 
 ## Structure
 
@@ -21,6 +21,7 @@ The report should keep source discipline in the background while foregrounding t
 - Is the structure organized by industry/company logic rather than source order?
 - Are repeated sections merged?
 - Are cases used as support rather than the main spine?
+- Are risks and counterarguments placed where they improve judgment rather than interrupt every paragraph?
 
 ## “Why” Logic
 
@@ -54,9 +55,12 @@ Good pattern:
 
 Prefer:
 
+- core thesis framework
 - value chain diagram
 - commercialization path
 - global expansion path
+- growth driver bridge
+- risk transmission map
 - segment comparison table with short cells
 - case box
 - chapter conclusion box
@@ -68,6 +72,18 @@ Avoid:
 - wide tables with long Chinese prose
 - dense source audit tables in the main body
 - diagrams that merely decorate rather than explain logic
+
+## Risk Treatment
+
+Good risk writing explains how the thesis could fail:
+
+- trigger signal
+- affected mechanism
+- expected impact
+- monitoring indicator
+- why it matters to the central conclusion
+
+Avoid generic endings such as only listing “政策风险、市场竞争风险、技术风险”. Tie each risk back to the report’s main logic.
 
 ## Language
 
@@ -97,7 +113,9 @@ Before delivery, check:
 - each chapter has a reason to exist
 - repeated chapters or duplicated themes have been merged
 - evidence supports key claims
+- material claims are traceable in `final/claim-source-map.md`
 - risks and limitations are centralized
+- counterarguments and failure conditions are addressed
 - cases are supporting boxes rather than the spine
 - chapter takeaways are present where useful
 - headings explain “why,” not only “what”
